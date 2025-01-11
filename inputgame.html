@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>input</title>
+</head>
+
+<body>
+    <h1>Game:input the number</h1>
+    <input id="inp" type="text"><br>
+    <p id="tipid">input...</p><br>
+    <!-- 游戏不支持opera及safari等 -->
+    <button type="button" onclick="checktype()" id="pressonfinishtype">submit</button>
+
+    <script>
+        var randomnum 
+        function spawnrandom(){
+          randomnum = Math.floor(Math.random() * 99) + 1;
+          document.getElementById("tipid").innerHTML = "input \" " + randomnum + " \" ";
+        }
+        function checktype(){
+          if (document.getElementById("inp").value == randomnum){
+            window.alert("right!")
+          }
+          else{
+            window.alert('wrong!')
+          }
+          spawnrandom()
+        }
+    </script>
+    <script>
+      spawnrandom()
+    </script>
+</body>
+
+</html>
